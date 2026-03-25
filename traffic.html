@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dalam.World • Affiliate Program • Earn Worldwide</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap');
+        
+        body { font-family: 'Inter', system_ui, sans-serif; }
+        .title-font { font-family: 'Space Grotesk', sans-serif; }
+        .hero-bg { background: linear-gradient(135deg, #0a0a2a 0%, #1a0033 100%); }
+        .neon-text { text-shadow: 0 0 10px #00f5ff, 0 0 20px #00f5ff, 0 0 40px #00f5ff; }
+        .glass { background: rgba(255,255,255,0.05); backdrop-filter: blur(16px); }
+        .card-hover { transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
+        .card-hover:hover { transform: translateY(-8px); box-shadow: 0 25px 50px -12px rgb(0 245 255 / 0.25); }
+        
+        .lang-btn.active { background-color: #00f5ff; color: #111827; font-weight: 700; }
+    </style>
+</head>
+<body class="bg-zinc-950 text-white">
+
+    <!-- LANGUAGE SWITCHER -->
+    <div class="fixed top-6 right-6 z-50 flex gap-2 bg-zinc-900/80 backdrop-blur-md px-3 py-2 rounded-3xl border border-white/10">
+        <button onclick="switchLang('en')" class="lang-btn active px-4 py-1.5 text-sm rounded-2xl transition-all" id="btn-en">EN</button>
+        <button onclick="switchLang('ru')" class="lang-btn px-4 py-1.5 text-sm rounded-2xl transition-all" id="btn-ru">RU</button>
+        <button onclick="switchLang('pl')" class="lang-btn px-4 py-1.5 text-sm rounded-2xl transition-all" id="btn-pl">PL</button>
+        <button onclick="switchLang('id')" class="lang-btn px-4 py-1.5 text-sm rounded-2xl transition-all" id="btn-id">ID</button>
+        <button onclick="switchLang('pt')" class="lang-btn px-4 py-1.5 text-sm rounded-2xl transition-all" id="btn-pt">PT</button>
+        <button onclick="switchLang('zh')" class="lang-btn px-4 py-1.5 text-sm rounded-2xl transition-all" id="btn-zh">中</button>
+    </div>
+
+    <!-- HERO -->
+    <section id="hero" class="hero-bg min-h-screen flex items-center relative overflow-hidden">
+        <div class="absolute inset-0 bg-[radial-gradient(at_center,#00f5ff15_0%,transparent_70%)]"></div>
+        
+        <div class="max-w-7xl mx-auto px-6 py-24 grid md:grid-cols-2 gap-12 items-center relative z-10">
+            <div class="space-y-8">
+                <div class="inline-flex items-center gap-3 bg-white/10 text-emerald-400 px-6 py-2 rounded-3xl text-sm font-medium border border-emerald-400/30">
+                    <i class="fa-solid fa-globe"></i>
+                    GLOBAL AFFILIATE PROGRAM
+                </div>
+                
+                <h1 id="hero-title" class="title-font text-6xl md:text-7xl leading-none font-bold tracking-tighter neon-text">
+                    Earn on Dalam.World<br>Worldwide
+                </h1>
+                
+                <p id="hero-subtitle" class="text-2xl text-zinc-300 max-w-lg">
+                    Attract players to a massive 3D MMO that can handle <span class="text-[#00f5ff] font-bold">over 500,000 players online</span> at the same time and get 
+                    <span class="text-[#00f5ff] font-semibold">at least 40% of ALL their deposits forever</span>
+                </p>
+                
+                <div class="flex items-center gap-4 text-lg">
+                    <a href="https://link.dalam.world/newacc" 
+                       class="bg-[#00f5ff] hover:bg-cyan-300 text-zinc-950 font-semibold px-10 py-5 rounded-2xl flex items-center gap-3 text-xl transition-all hover:scale-105">
+                        <i class="fa-solid fa-rocket"></i>
+                        Start Earning Now
+                    </a>
+                    <a href="#how" 
+                       class="border border-white/30 hover:bg-white/10 font-medium px-8 py-5 rounded-2xl flex items-center gap-3 transition-all">
+                        How it works →
+                    </a>
+                </div>
+                
+                <div class="flex flex-wrap gap-x-8 gap-y-3 text-sm text-emerald-400">
+                    <div class="flex items-center gap-2"><i class="fa-solid fa-circle-check"></i> Instant crypto payouts</div>
+                    <div class="flex items-center gap-2"><i class="fa-solid fa-circle-check"></i> Rate only increases</div>
+                    <div class="flex items-center gap-2"><i class="fa-solid fa-circle-check"></i> Full transparency</div>
+                    <div class="flex items-center gap-2"><i class="fa-solid fa-circle-check"></i> Global traffic</div>
+                </div>
+            </div>
+            
+            <div class="relative hidden md:block">
+                <div class="glass border border-white/10 rounded-3xl p-8">
+                    <div class="bg-zinc-900 rounded-2xl p-8 text-center">
+                        <div class="text-8xl mb-6">🌍</div>
+                        <h3 class="title-font text-4xl font-bold">Dalam.World</h3>
+                        <p class="text-emerald-400 text-2xl">Next-Gen 3D MMO</p>
+                        <div class="mt-10 text-5xl font-bold text-cyan-400">500 000+</div>
+                        <p class="text-zinc-400">players online simultaneously</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GAME DESCRIPTION -->
+    <section id="game" class="py-24 bg-black">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 id="game-title" class="title-font text-5xl font-bold">Dalam.World — a huge living world</h2>
+                <p id="game-subtitle" class="text-2xl text-zinc-400 mt-4">Players spend frequently and keep coming back</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="glass rounded-3xl p-8 card-hover">
+                    <i class="fa-solid fa-cube text-5xl text-cyan-400 mb-6"></i>
+                    <h3 id="feature1" class="text-2xl font-semibold">Massive Seamless 3D MMO</h3>
+                    <p id="feature1-desc" class="text-zinc-400 mt-3">Open world, PvP, guilds, economy and true freedom.</p>
+                </div>
+                <div class="glass rounded-3xl p-8 card-hover">
+                    <i class="fa-solid fa-dice text-5xl text-amber-400 mb-6"></i>
+                    <h3 id="feature2" class="text-2xl font-semibold">In-game roulettes, bets & gambling</h3>
+                    <p id="feature2-desc" class="text-zinc-400 mt-3">Players top up their balance regularly — high LTV.</p>
+                </div>
+                <div class="glass rounded-3xl p-8 card-hover">
+                    <i class="fa-solid fa-skull text-5xl text-red-400 mb-6"></i>
+                    <h3 id="feature3" class="text-2xl font-semibold">Donate coins drop on death</h3>
+                    <p id="feature3-desc" class="text-zinc-400 mt-3">Lost them? Top up again. This makes players donate repeatedly.</p>
+                </div>
+            </div>
+            
+            <div class="mt-20 bg-gradient-to-br from-purple-900/30 to-cyan-900/30 rounded-3xl p-12 text-center border border-white/10">
+                <p id="global-text" class="text-2xl leading-relaxed">
+                    The game is translated into a huge number of languages and works in almost every country in the world.<br>
+                    Servers are <span class="text-emerald-400 font-bold">not blocked in any country</span> — this opens up traffic from India, Indonesia, Russia, Iran, USA, Brazil, Turkey, Vietnam and many others!
+                </p>
+                <p id="global-sub" class="mt-6 text-xl text-amber-400">Huge potential for international traffic and maximum earnings.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SYSTEM REQUIREMENTS -->
+    <section class="py-20 bg-zinc-950">
+        <div class="max-w-5xl mx-auto px-6">
+            <h2 id="sys-title" class="title-font text-4xl font-bold text-center mb-10">Minimum System Requirements</h2>
+            <div class="glass rounded-3xl overflow-hidden border border-white/10">
+                <table class="w-full text-left">
+                    <thead class="bg-zinc-900">
+                        <tr>
+                            <th class="px-8 py-5 text-lg" id="sys-col1">Component</th>
+                            <th class="px-8 py-5 text-lg" id="sys-col2">Minimum</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-white/10">
+                        <tr><td class="px-8 py-5">Memory</td><td class="px-8 py-5">8.1 Gb</td></tr>
+                        <tr><td class="px-8 py-5">Processor</td><td class="px-8 py-5">2.4 GHz</td></tr>
+                        <tr><td class="px-8 py-5">RAM</td><td class="px-8 py-5">1 Gb</td></tr>
+                        <tr><td class="px-8 py-5">Video Card</td><td class="px-8 py-5">256 Mb</td></tr>
+                        <tr><td class="px-8 py-5">Internet</td><td class="px-8 py-5">52 Kbps</td></tr>
+                        <tr><td class="px-8 py-5">OS</td><td class="px-8 py-5">Windows XP / Linux / macOS</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <p id="sys-desc" class="text-center text-zinc-400 mt-6 text-sm">Low system requirements + Linux & macOS support = accessible to millions of users worldwide.</p>
+        </div>
+    </section>
+
+    <!-- BENEFITS -->
+    <section id="benefits" class="py-24 bg-black">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-20">
+                <div>
+                    <h2 id="benefits-title" class="title-font text-5xl font-bold mb-10">Why traffic sources from all over the world choose us</h2>
+                    <div class="space-y-10">
+                        <div class="flex gap-6">
+                            <div class="text-4xl">💰</div>
+                            <div>
+                                <h4 id="benefit1" class="text-2xl font-semibold">40%+ from every deposit</h4>
+                                <p id="benefit1-desc" class="text-zinc-400">Minimum rate 40%. The rate can only increase. Lifetime.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-6">
+                            <div class="text-4xl">⚡</div>
+                            <div>
+                                <h4 id="benefit2" class="text-2xl font-semibold">Instant payouts on request</h4>
+                                <p id="benefit2-desc" class="text-zinc-400">To any crypto wallet — no delays.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-6">
+                            <div class="text-4xl">📊</div>
+                            <div>
+                                <h4 id="benefit3" class="text-2xl font-semibold">Fully transparent dashboard</h4>
+                                <p id="benefit3-desc" class="text-zinc-400">See all registrations by your link and code in real time.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-6">
+                            <div class="text-4xl">🌍</div>
+                            <div>
+                                <h4 id="benefit4" class="text-2xl font-semibold">Global audience</h4>
+                                <p id="benefit4-desc" class="text-zinc-400">Drive traffic from any country — servers work everywhere.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="glass rounded-3xl p-12 border border-white/10 flex flex-col justify-center">
+                    <div class="text-6xl mb-6">🤝</div>
+                    <h3 id="coop-title" class="title-font text-4xl font-bold mb-6">We are open to cooperation</h3>
+                    <p id="coop-text" class="text-xl text-zinc-300">
+                        Individual conditions for every partner. We can create unique creatives and invitation templates together.<br><br>
+                        Online in the game is important to us. That’s why we give traffic sources the opportunity to earn <span class="text-[#00f5ff] font-bold">really good money</span> from anywhere in the world.
+                    </p>
+                    <a href="https://link.dalam.world/newacc" class="mt-10 block text-center bg-gradient-to-r from-cyan-400 to-purple-400 hover:from-cyan-300 hover:to-purple-300 text-zinc-950 font-bold py-6 rounded-3xl text-xl transition-all">
+                        Join the Affiliate Program
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section id="how" class="py-24 bg-zinc-950">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <h2 id="how-title" class="title-font text-5xl font-bold mb-4">Start earning in 3 steps</h2>
+            <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto mt-16">
+                <div class="glass rounded-3xl p-8">
+                    <div class="text-6xl font-bold text-cyan-400 mb-4">1</div>
+                    <h4 id="step1" class="text-2xl font-semibold">Create an account</h4>
+                    <a href="https://link.dalam.world/newacc" class="text-[#00f5ff] block mt-6 hover:underline">https://link.dalam.world/newacc</a>
+                </div>
+                <div class="glass rounded-3xl p-8">
+                    <div class="text-6xl font-bold text-cyan-400 mb-4">2</div>
+                    <h4 id="step2" class="text-2xl font-semibold">Go to “Affiliate Program”</h4>
+                    <p id="step2-desc" class="text-zinc-400 mt-4">Get your personal referral link and code</p>
+                </div>
+                <div class="glass rounded-3xl p-8">
+                    <div class="text-6xl font-bold text-cyan-400 mb-4">3</div>
+                    <h4 id="step3" class="text-2xl font-semibold">Attract players</h4>
+                    <p id="step3-desc" class="text-zinc-400 mt-4">From any country — income comes automatically</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <footer class="bg-black py-20 border-t border-white/10">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <p id="footer-cta" class="text-3xl title-font mb-8">Ready to attract players from all over the world and earn at maximum?</p>
+            <a href="https://link.dalam.world/newacc" 
+               class="inline-flex items-center gap-4 bg-[#00f5ff] text-zinc-950 px-16 py-7 rounded-3xl text-2xl font-bold hover:bg-cyan-300 transition-all">
+                Create account right now
+                <i class="fa-solid fa-arrow-right text-3xl"></i>
+            </a>
+            <p id="footer-sub" class="mt-12 text-zinc-400">Constant updates • New donate items • Long-term project</p>
+        </div>
+    </footer>
+
+    <script>
+        const translations = {
+            en: {
+                "hero-title": "Earn on Dalam.World<br>Worldwide",
+                "hero-subtitle": "Attract players to a massive 3D MMO that can handle <span class='text-[#00f5ff] font-bold'>over 500,000 players online</span> at the same time and get <span class='text-[#00f5ff] font-semibold'>at least 40% of ALL their deposits forever</span>",
+                "game-title": "Dalam.World — a huge living world",
+                "game-subtitle": "Players spend frequently and keep coming back",
+                "feature1": "Massive Seamless 3D MMO",
+                "feature1-desc": "Open world, PvP, guilds, economy and true freedom.",
+                "feature2": "In-game roulettes, bets & gambling",
+                "feature2-desc": "Players top up their balance regularly — high LTV.",
+                "feature3": "Donate coins drop on death",
+                "feature3-desc": "Lost them? Top up again. This makes players donate repeatedly.",
+                "global-text": "The game is translated into a huge number of languages and works in almost every country in the world.<br>Servers are <span class='text-emerald-400 font-bold'>not blocked in any country</span> — this opens up traffic from India, Indonesia, Russia, Iran, USA, Brazil, Turkey, Vietnam and many others!",
+                "global-sub": "Huge potential for international traffic and maximum earnings.",
+                "sys-title": "Minimum System Requirements",
+                "sys-col1": "Component",
+                "sys-col2": "Minimum",
+                "sys-desc": "Low system requirements + Linux & macOS support = accessible to millions of users worldwide.",
+                "benefits-title": "Why traffic sources from all over the world choose us",
+                "benefit1": "40%+ from every deposit",
+                "benefit1-desc": "Minimum rate 40%. The rate can only increase. Lifetime.",
+                "benefit2": "Instant payouts on request",
+                "benefit2-desc": "To any crypto wallet — no delays.",
+                "benefit3": "Fully transparent dashboard",
+                "benefit3-desc": "See all registrations by your link and code in real time.",
+                "benefit4": "Global audience",
+                "benefit4-desc": "Drive traffic from any country — servers work everywhere.",
+                "coop-title": "We are open to cooperation",
+                "coop-text": "Individual conditions for every partner. We can create unique creatives and invitation templates together.<br><br>Online in the game is important to us. That’s why we give traffic sources the opportunity to earn <span class='text-[#00f5ff] font-bold'>really good money</span> from anywhere in the world.",
+                "how-title": "Start earning in 3 steps",
+                "step1": "Create an account",
+                "step2": "Go to “Affiliate Program”",
+                "step2-desc": "Get your personal referral link and code",
+                "step3": "Attract players",
+                "step3-desc": "From any country — income comes automatically",
+                "footer-cta": "Ready to attract players from all over the world and earn at maximum?",
+                "footer-sub": "Constant updates • New donate items • Long-term project"
+            },
+            ru: {
+                "hero-title": "Зарабатывай на Dalam.World<br>по всему миру",
+                "hero-subtitle": "Привлекай игроков в масштабную 3D MMO, которая выдерживает <span class='text-[#00f5ff] font-bold'>более 500 000 игроков онлайн</span> одновременно, и получай <span class='text-[#00f5ff] font-semibold'>минимум 40% от ВСЕХ их пополнений навсегда</span>",
+                "game-title": "Dalam.World — огромный живой мир",
+                "game-subtitle": "Игроки тратят часто и возвращаются снова и снова",
+                "feature1": "Масштабная бесшовная 3D MMO",
+                "feature1-desc": "Открытый мир, PvP, гильдии, экономика и настоящая свобода.",
+                "feature2": "Рулетки, ставки и азарт внутри игры",
+                "feature2-desc": "Игроки регулярно пополняют баланс — высокий LTV.",
+                "feature3": "Донат-монеты выпадают при смерти",
+                "feature3-desc": "Потерял — донать снова. Это заставляет игроков пополнять снова и снова.",
+                "global-text": "Игра переведена на огромное количество языков и работает практически во всех странах мира.<br>Серверы <span class='text-emerald-400 font-bold'>не заблокированы ни в одной стране</span> — это открывает трафик из Индии, Индонезии, России, Ирана, США, Бразилии, Турции, Вьетнама и многих других!",
+                "global-sub": "Огромный потенциал для международного трафика и максимального заработка.",
+                "sys-title": "Минимальные системные требования",
+                "sys-col1": "Компонент",
+                "sys-col2": "Минимум",
+                "sys-desc": "Низкие системные требования + поддержка Linux и macOS = доступность для миллионов пользователей по всему миру.",
+                "benefits-title": "Почему трафикеры со всего мира выбирают нас",
+                "benefit1": "40%+ с каждого пополнения",
+                "benefit1-desc": "Минимальная ставка 40%. Ставка может только расти. Навсегда.",
+                "benefit2": "Мгновенные выплаты по запросу",
+                "benefit2-desc": "На любой криптокошелёк — без задержек.",
+                "benefit3": "Полностью прозрачный кабинет",
+                "benefit3-desc": "В реальном времени видишь всех зарегистрированных по твоей ссылке и коду.",
+                "benefit4": "Глобальная аудитория",
+                "benefit4-desc": "Привлекай трафик из любой страны — серверы работают везде.",
+                "coop-title": "Мы открыты к сотрудничеству",
+                "coop-text": "Для каждого партнёра — индивидуальные условия. Можем вместе создать уникальные креативы и пригласительные шаблоны.<br><br>Для нас важен онлайн в игре. Поэтому мы даём возможность зарабатывать <span class='text-[#00f5ff] font-bold'>очень хорошие деньги</span> трафикерам из любой точки мира.",
+                "how-title": "Начни зарабатывать за 3 шага",
+                "step1": "Создай аккаунт",
+                "step2": "Зайди в раздел «Реферальная программа»",
+                "step2-desc": "Получи свою реферальную ссылку и код",
+                "step3": "Привлекай игроков",
+                "step3-desc": "Из любой страны мира — доход идёт автоматически",
+                "footer-cta": "Готов привлекать игроков со всего мира и зарабатывать по максимуму?",
+                "footer-sub": "Постоянные обновления • Новые донат-предметы • Долгая жизнь проекта"
+            },
+            pl: {
+                "hero-title": "Zarabiaj na Dalam.World<br>na całym świecie",
+                "hero-subtitle": "Przyciągaj graczy do ogromnego 3D MMO, które wytrzymuje <span class='text-[#00f5ff] font-bold'>ponad 500 000 graczy online</span> jednocześnie i otrzymuj <span class='text-[#00f5ff] font-semibold'>minimum 40% od WSZYSTKICH ich wpłat na zawsze</span>",
+                "game-title": "Dalam.World — ogromny żywy świat",
+                "game-subtitle": "Gracze wydają często i wracają ponownie",
+                "feature1": "Ogromne bezszwowe 3D MMO",
+                "feature1-desc": "Otwarty świat, PvP, gildie, ekonomia i prawdziwa wolność.",
+                "feature2": "Ruletki, zakłady i hazard w grze",
+                "feature2-desc": "Gracze regularnie doładowują saldo — wysoki LTV.",
+                "feature3": "Monety donate wypadają przy śmierci",
+                "feature3-desc": "Straciłeś? Doładuj ponownie. To zmusza graczy do ponownych wpłat.",
+                "global-text": "Gra jest przetłumaczona na ogromną liczbę języków i działa w prawie każdym kraju świata.<br>Serwery <span class='text-emerald-400 font-bold'>nie są zablokowane w żadnym kraju</span> — to otwiera ruch z Indii, Indonezji, Rosji, Iranu, USA, Brazylii, Turcji, Wietnamu i wielu innych!",
+                "global-sub": "Ogromny potencjał dla międzynarodowego ruchu i maksymalnych zarobków.",
+                "sys-title": "Minimalne wymagania systemowe",
+                "sys-col1": "Komponent",
+                "sys-col2": "Minimum",
+                "sys-desc": "Niskie wymagania systemowe + wsparcie dla Linux i macOS = dostępność dla milionów użytkowników na całym świecie.",
+                "benefits-title": "Dlaczego źródła ruchu z całego świata wybierają nas",
+                "benefit1": "40%+ od każdej wpłaty",
+                "benefit1-desc": "Minimalna stawka 40%. Stawka może tylko rosnąć. Na zawsze.",
+                "benefit2": "Natychmiastowe wypłaty na żądanie",
+                "benefit2-desc": "Na dowolny portfel kryptowalut — bez opóźnień.",
+                "benefit3": "Całkowicie przejrzysty panel",
+                "benefit3-desc": "W czasie rzeczywistym widzisz wszystkie rejestracje przez Twój link i kod.",
+                "benefit4": "Globalna publiczność",
+                "benefit4-desc": "Przyciągaj ruch z dowolnego kraju — serwery działają wszędzie.",
+                "coop-title": "Jesteśmy otwarci na współpracę",
+                "coop-text": "Indywidualne warunki dla każdego partnera. Możemy wspólnie stworzyć unikalne kreacje i szablony zaproszeń.<br><br>Online w grze jest dla nas ważny. Dlatego dajemy źródłom ruchu możliwość zarabiania <span class='text-[#00f5ff] font-bold'>naprawdę dobrych pieniędzy</span> z dowolnego miejsca na świecie.",
+                "how-title": "Zacznij zarabiać w 3 krokach",
+                "step1": "Utwórz konto",
+                "step2": "Przejdź do „Program partnerski”",
+                "step2-desc": "Otrzymaj swój osobisty link referencyjny i kod",
+                "step3": "Przyciągaj graczy",
+                "step3-desc": "Z dowolnego kraju — dochód wpływa automatycznie",
+                "footer-cta": "Gotowy przyciągać graczy z całego świata i zarabiać maksymalnie?",
+                "footer-sub": "Stałe aktualizacje • Nowe przedmioty donate • Długoterminowy projekt"
+            },
+            id: {
+                "hero-title": "Hasilkan Uang di Dalam.World<br>di Seluruh Dunia",
+                "hero-subtitle": "Tarik pemain ke MMO 3D masif yang mampu menampung <span class='text-[#00f5ff] font-bold'>lebih dari 500.000 pemain online</span> secara bersamaan dan dapatkan <span class='text-[#00f5ff] font-semibold'>minimal 40% dari SEMUA deposit mereka selamanya</span>",
+                "game-title": "Dalam.World — dunia hidup yang sangat besar",
+                "game-subtitle": "Pemain sering mengisi ulang dan terus kembali",
+                "feature1": "MMO 3D Seamless Skala Besar",
+                "feature1-desc": "Dunia terbuka, PvP, guild, ekonomi, dan kebebasan sejati.",
+                "feature2": "Roullete, taruhan & perjudian di dalam game",
+                "feature2-desc": "Pemain sering top up saldo — LTV tinggi.",
+                "feature3": "Koin donate jatuh saat mati",
+                "feature3-desc": "Hilang? Top up lagi. Ini memaksa pemain untuk mendonasikan berulang kali.",
+                "global-text": "Game ini diterjemahkan ke dalam banyak bahasa dan berfungsi di hampir setiap negara di dunia.<br>Server <span class='text-emerald-400 font-bold'>tidak diblokir di negara mana pun</span> — ini membuka lalu lintas dari India, Indonesia, Rusia, Iran, USA, Brasil, Turki, Vietnam, dan banyak lagi!",
+                "global-sub": "Potensi besar untuk lalu lintas internasional dan penghasilan maksimal.",
+                "sys-title": "Persyaratan Sistem Minimum",
+                "sys-col1": "Komponen",
+                "sys-col2": "Minimum",
+                "sys-desc": "Persyaratan sistem rendah + dukungan Linux & macOS = dapat diakses oleh jutaan pengguna di seluruh dunia.",
+                "benefits-title": "Mengapa sumber traffic dari seluruh dunia memilih kami",
+                "benefit1": "40%+ dari setiap deposit",
+                "benefit1-desc": "Tarif minimum 40%. Tarif hanya bisa naik. Selamanya.",
+                "benefit2": "Pembayaran instan sesuai permintaan",
+                "benefit2-desc": "Ke dompet kripto mana pun — tanpa penundaan.",
+                "benefit3": "Dashboard sepenuhnya transparan",
+                "benefit3-desc": "Lihat semua pendaftaran melalui link dan kode Anda secara real time.",
+                "benefit4": "Audiens global",
+                "benefit4-desc": "Tarik traffic dari negara mana pun — server berfungsi di mana-mana.",
+                "coop-title": "Kami terbuka untuk kerjasama",
+                "coop-text": "Kondisi pribadi untuk setiap partner. Kami bisa membuat kreatif dan template undangan unik bersama.<br><br>Online di game sangat penting bagi kami. Oleh karena itu kami memberi kesempatan kepada traffic sources untuk menghasilkan <span class='text-[#00f5ff] font-bold'>uang yang sangat bagus</span> dari mana saja di dunia.",
+                "how-title": "Mulai menghasilkan dalam 3 langkah",
+                "step1": "Buat akun",
+                "step2": "Masuk ke “Program Afiliasi”",
+                "step2-desc": "Dapatkan link referral dan kode pribadi Anda",
+                "step3": "Tarik pemain",
+                "step3-desc": "Dari negara mana pun — pendapatan masuk secara otomatis",
+                "footer-cta": "Siap menarik pemain dari seluruh dunia dan menghasilkan maksimal?",
+                "footer-sub": "Update terus-menerus • Item donate baru • Proyek jangka panjang"
+            },
+            pt: {
+                "hero-title": "Ganhe dinheiro no Dalam.World<br>no mundo todo",
+                "hero-subtitle": "Atraia jogadores para um MMO 3D massivo que suporta <span class='text-[#00f5ff] font-bold'>mais de 500.000 jogadores online</span> ao mesmo tempo e receba <span class='text-[#00f5ff] font-semibold'>pelo menos 40% de TODOS os depósitos deles para sempre</span>",
+                "game-title": "Dalam.World — um mundo vivo enorme",
+                "game-subtitle": "Jogadores gastam com frequência e voltam sempre",
+                "feature1": "MMO 3D Seamless Massivo",
+                "feature1-desc": "Mundo aberto, PvP, guildas, economia e verdadeira liberdade.",
+                "feature2": "Roleta, apostas e jogos de azar no jogo",
+                "feature2-desc": "Jogadores recarregam o saldo regularmente — alto LTV.",
+                "feature3": "Moedas donate caem ao morrer",
+                "feature3-desc": "Perdeu? Recarregue novamente. Isso força os jogadores a doar repetidamente.",
+                "global-text": "O jogo está traduzido para um grande número de idiomas e funciona em quase todos os países do mundo.<br>Os servidores <span class='text-emerald-400 font-bold'>não estão bloqueados em nenhum país</span> — isso abre tráfego da Índia, Indonésia, Rússia, Irã, EUA, Brasil, Turquia, Vietnã e muitos outros!",
+                "global-sub": "Enorme potencial para tráfego internacional e ganhos máximos.",
+                "sys-title": "Requisitos Mínimos do Sistema",
+                "sys-col1": "Componente",
+                "sys-col2": "Mínimo",
+                "sys-desc": "Requisitos baixos + suporte a Linux e macOS = acessível a milhões de usuários em todo o mundo.",
+                "benefits-title": "Por que fontes de tráfego do mundo todo escolhem a gente",
+                "benefit1": "40%+ de cada depósito",
+                "benefit1-desc": "Taxa mínima 40%. A taxa só pode aumentar. Para sempre.",
+                "benefit2": "Pagamentos instantâneos sob demanda",
+                "benefit2-desc": "Para qualquer carteira cripto — sem atrasos.",
+                "benefit3": "Painel totalmente transparente",
+                "benefit3-desc": "Veja todas as inscrições pelo seu link e código em tempo real.",
+                "benefit4": "Público global",
+                "benefit4-desc": "Traga tráfego de qualquer país — servidores funcionam em todos os lugares.",
+                "coop-title": "Estamos abertos a parcerias",
+                "coop-text": "Condições individuais para cada parceiro. Podemos criar criativos e templates de convite únicos juntos.<br><br>O online no jogo é importante para nós. Por isso damos a oportunidade às fontes de tráfego de ganhar <span class='text-[#00f5ff] font-bold'>muito dinheiro</span> de qualquer lugar do mundo.",
+                "how-title": "Comece a ganhar em 3 passos",
+                "step1": "Crie uma conta",
+                "step2": "Vá para “Programa de Afiliados”",
+                "step2-desc": "Obtenha seu link de referência e código pessoal",
+                "step3": "Atraia jogadores",
+                "step3-desc": "De qualquer país — a renda vem automaticamente",
+                "footer-cta": "Pronto para atrair jogadores do mundo todo e ganhar no máximo?",
+                "footer-sub": "Atualizações constantes • Novos itens de donate • Projeto de longa duração"
+            },
+            zh: {
+                "hero-title": "在 Dalam.World 上赚钱<br>全球范围",
+                "hero-subtitle": "吸引玩家进入大规模 3D MMO，可同时容纳 <span class='text-[#00f5ff] font-bold'>超过 50 万在线玩家</span>，并获得 <span class='text-[#00f5ff] font-semibold'>至少 40% 的所有充值收入，永久有效</span>",
+                "game-title": "Dalam.World — 巨大的活生生的世界",
+                "game-subtitle": "玩家经常充值并不断回来",
+                "feature1": "大规模无缝 3D MMO",
+                "feature1-desc": "开放世界、PvP、公会、经济和真正的自由。",
+                "feature2": "游戏内轮盘、投注和赌博",
+                "feature2-desc": "玩家经常充值余额 — 高 LTV。",
+                "feature3": "死亡时捐献币掉落",
+                "feature3-desc": "丢了？再充值。这会迫使玩家反复充值。",
+                "global-text": "游戏已翻译成大量语言，几乎在世界每个国家都能运行。<br>服务器 <span class='text-emerald-400 font-bold'>在任何国家都没有被封锁</span> —— 这为来自印度、印尼、俄罗斯、伊朗、美国、巴西、土耳其、越南等地的流量打开了大门！",
+                "global-sub": "国际流量的巨大潜力，最大化收益。",
+                "sys-title": "最低系统要求",
+                "sys-col1": "组件",
+                "sys-col2": "最低",
+                "sys-desc": "低系统要求 + 支持 Linux 和 macOS = 全球数百万用户可访问。",
+                "benefits-title": "为什么全球流量来源选择我们",
+                "benefit1": "每次充值 40%+",
+                "benefit1-desc": "最低比例 40%。比例只会增加。终身有效。",
+                "benefit2": "按请求即时支付",
+                "benefit2-desc": "到任何加密钱包 —— 无延迟。",
+                "benefit3": "完全透明的仪表板",
+                "benefit3-desc": "实时查看通过您的链接和代码的所有注册。",
+                "benefit4": "全球受众",
+                "benefit4-desc": "从任何国家引入流量 —— 服务器在任何地方都运行。",
+                "coop-title": "我们欢迎合作",
+                "coop-text": "每个合作伙伴都有个性化条件。我们可以一起创建独特的创意和邀请模板。<br><br>游戏在线人数对我们很重要。因此，我们让流量来源有机会从世界任何地方赚取 <span class='text-[#00f5ff] font-bold'>非常可观的收入</span>。",
+                "how-title": "3步开始赚钱",
+                "step1": "创建账户",
+                "step2": "进入“联盟计划”",
+                "step2-desc": "获取您的专属推荐链接和代码",
+                "step3": "吸引玩家",
+                "step3-desc": "来自任何国家 —— 收入自动到账",
+                "footer-cta": "准备好从世界各地吸引玩家并最大化收益了吗？",
+                "footer-sub": "持续更新 • 新捐献物品 • 长期项目"
+            }
+        };
+
+        function switchLang(lang) {
+        document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
+        
+        const activeBtn = document.getElementById(`btn-${lang}`);
+        if (activeBtn) activeBtn.classList.add('active');
+        
+        const t = translations[lang] || translations.en;
+        
+        Object.keys(t).forEach(key => {
+            const el = document.getElementById(key);
+            if (el) el.innerHTML = t[key];
+        });
+        
+        document.documentElement.lang = lang;
+    }
+
+    function detectBrowserLanguage() {
+        const userLanguages = navigator.languages || [navigator.language || navigator.userLanguage];
+        
+        let detected = (userLanguages[0] || 'en').toLowerCase().slice(0, 2);
+        
+        const langMap = {
+            'ru': 'ru',     
+            'pl': 'pl',     
+            'id': 'id',     
+            'in': 'id',     
+            'pt': 'pt',     
+            'br': 'pt',     
+            'zh': 'zh',     
+            'cn': 'zh'
+        };
+        
+        const targetLang = langMap[detected] || 'en';
+        
+        switchLang(targetLang);
+    }
+
+    window.addEventListener('load', detectBrowserLanguage);
+    
+    // detectBrowserLanguage();
+    </script>
+</body>
+</html>
