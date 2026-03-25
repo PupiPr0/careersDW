@@ -174,8 +174,8 @@
         <button onclick="switchLang('id')" class="lang-btn px-4 py-1.5 text-sm rounded-2xl transition-all" id="btn-id">ID</button>
         <button onclick="switchLang('pt')" class="lang-btn px-4 py-1.5 text-sm rounded-2xl transition-all" id="btn-pt">PT</button>
         <button onclick="switchLang('zh')" class="lang-btn px-4 py-1.5 text-sm rounded-2xl transition-all" id="btn-zh">中</button>
-        <button onclick="switchLang('hi')" class="lang-btn px-4 py-1.5 text-sm rounded-2xl transition-all" id="btn-zh">HI</button>
-        <button onclick="switchLang('bn')" class="lang-btn px-4 py-1.5 text-sm rounded-2xl transition-all" id="btn-zh">BN</button>
+        <button onclick="switchLang('hi')" class="lang-btn px-4 py-1.5 text-sm rounded-2xl transition-all" id="btn-hi">HI</button>
+        <!--button onclick="switchLang('bn')" class="lang-btn px-4 py-1.5 text-sm rounded-2xl transition-all" id="btn-bn">BN</button-->
     </div>
 
     <!-- HERO -->
@@ -681,7 +681,7 @@
     "step3-desc": "বিশ্বের যেকোনো দেশ থেকে — আয় স্বয়ংক্রিয়ভাবে আসবে",
     "footer-cta": "সারা বিশ্ব থেকে খেলোয়াড় আকর্ষণ করে সর্বোচ্চ আয় করতে প্রস্তুত?",
     "footer-sub": "নিয়মিত আপডেট • নতুন ডোনেট আইটেম • প্রজেক্টের দীর্ঘ জীবন"
-}
+},
         };
 
         function switchLang(lang) {
@@ -706,7 +706,9 @@
         let detected = (userLanguages[0] || 'en').toLowerCase().slice(0, 2);
         
         const langMap = {
-            'ru': 'ru',     
+            'ru': 'ru',
+            'hi': 'hi',
+            'bn': 'bn',
             'pl': 'pl',     
             'id': 'id',     
             'in': 'id',     
@@ -714,8 +716,7 @@
             'br': 'pt',     
             'zh': 'zh',     
             'cn': 'zh',
-            'hi': 'hi',
-            'bn': 'bn'
+            
         };
         
         const targetLang = langMap[detected] || 'en';
