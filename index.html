@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Careers — Dalam World</title>
+  <style>
+    :root{
+      --bg:#f7f7f8;
+      --card:#ffffff;
+      --muted:#6b7280;
+      --accent:#0366d6;
+      --success:#2d9d78;
+      --danger:#d9534f;
+      --border:#e6e6e9;
+      --radius:8px;
+      --maxw:960px;
+    }
+    html,body{height:100%}
+    body {
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      margin:0;
+      padding:40px;
+      background:var(--bg);
+      color:#111827;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+    }
+    .container { max-width:var(--maxw); margin:0 auto; }
+    header { margin-bottom:24px; }
+    h1 { margin:0 0 6px; font-size:28px; }
+    p.lead { margin:0; color:var(--muted); }
+    .jobs { display:grid; gap:16px; margin-top:20px; }
+    .job {
+      background:var(--card);
+      border:1px solid var(--border);
+      padding:18px;
+      border-radius:var(--radius);
+      box-shadow: 0 1px 0 rgba(16,24,40,0.03);
+    }
+    .job-header { display:flex; justify-content:space-between; align-items:center; gap:12px; }
+    .job h2 { margin:0; font-size:18px; }
+    .badge {
+      font-size:13px;
+      color:#fff;
+      padding:6px 10px;
+      border-radius:999px;
+      white-space:nowrap;
+    }
+    .badge.filled { background:var(--success); }
+    .badge.open { background:var(--accent); }
+    .meta { color:var(--muted); font-size:13px; margin-top:8px; }
+    .desc { margin:12px 0 0; color:#111827; }
+    .skills { margin-top:10px; color:var(--muted); font-size:14px; }
+    .apply { margin-top:14px; }
+    .apply a {
+      display:inline-block;
+      padding:9px 14px;
+      background:var(--accent);
+      color:#fff;
+      text-decoration:none;
+      border-radius:8px;
+      font-weight:600;
+      font-size:14px;
+    }
+    .note { margin-top:8px; color:var(--muted); font-size:13px; }
+    footer { margin-top:28px; color:var(--muted); font-size:13px; }
+    @media (max-width:600px){
+      body{padding:20px}
+      .job { padding:14px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Careers — Dalam World</h1>
+      <p class="lead">Open and closed positions.</p>
+    </header>
+
+    <section class="jobs">
+
+      <article class="job">
+        <div class="job-header">
+          <h2>Programmer</h2>
+          <span class="badge filled">Filled</span>
+        </div>
+        <div class="meta">Stack: Java, Elixir, Jython, C++, Rust</div>
+        <p class="desc">
+          Work on backend services, module integration, performance optimization, and support of high-load systems.
+          Expect experience in at least one of the listed languages and understanding of architectural patterns.
+        </p>
+        <div class="skills"><strong>Requirements:</strong> multithreading, networking, databases, testing, git, code review.</div>
+        <div class="note">Level: mid to senior depending on the specific language.</div>
+      </article>
+
+      <article class="job">
+        <div class="job-header">
+          <h2>Designer</h2>
+          <span class="badge filled">Filled</span>
+        </div>
+        <div class="meta">Tools: Figma and others (Sketch, Adobe CC, etc.)</div>
+        <p class="desc">
+          Design visual identity, interfaces, and marketing creatives. Create design systems,
+          prepare specs for developers and collaborate with the product team.
+        </p>
+        <div class="skills"><strong>Requirements:</strong> Figma proficiency, prototyping, component work, basic animations, asset export.</div>
+        <div class="note">Portfolio required.</div>
+      </article>
+
+      <article class="job">
+        <div class="job-header">
+          <h2>Web Designer</h2>
+          <span class="badge filled">Filled</span>
+        </div>
+        <div class="meta">Technologies: HTML, CSS, JavaScript</div>
+        <p class="desc">
+          Design and build responsive pages, collaborate with frontend developers, optimize user experience across devices.
+          Participate in landing and product interface creation.
+        </p>
+        <div class="skills"><strong>Requirements:</strong> semantic markup, responsiveness, CSS frameworks, basic JS, performance optimization.</div>
+        <div class="note">Accessibility and SEO knowledge is a plus.</div>
+      </article>
+
+      <article class="job">
+        <div class="job-header">
+          <h2>Traffic Specialist / Arbitrage</h2>
+          <a class="badge open" href="/traffic">Open — details</a>
+        </div>
+        <div class="meta">Role: launch and optimize ad campaigns, grow KPIs</div>
+        <p class="desc">
+          Find traffic channels, run tests, scale profitable creatives and offers.
+          Collaborate with tracking, analytics, and creative teams to achieve ROAS/ROI targets.
+        </p>
+        <div class="skills"><strong>Requirements:</strong> experience with push/native/social/RTB, tracking (Adjust/Voluum/others), creatives and A/B testing.</div>
+        <div class="apply">
+          <a href="/traffic">Apply for Traffic Specialist</a>
+        </div>
+        <div class="note">Position open — candidates with experience and case studies preferred.</div>
+      </article>
+
+      <article class="job">
+        <div class="job-header">
+          <h2>Architect (IT / Sysadmin)</h2>
+          <span class="badge filled">Filled</span>
+        </div>
+        <div class="meta">Area: infrastructure, DevOps, security</div>
+        <p class="desc">
+          Design and maintain infrastructure: cloud solutions, CI/CD, containerization, monitoring and backups.
+          Ensure system reliability, security, and scalability.
+        </p>
+        <div class="skills"><strong>Requirements:</strong> knowledge of AWS/GCP/or equivalents, Docker/Kubernetes, IaC (Terraform/Ansible), SRE practices, and solid Linux administration skills.</div>
+        <div class="note">Experience in architecting distributed systems is required.</div>
+      </article>
+
+    </section>
+
+    <footer>
+      <div>© Dalam World</div>
+    </footer>
+  </div>
+</body>
+</html>
